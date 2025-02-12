@@ -1,0 +1,814 @@
+/*importaciones */
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap'); /*font-family: "Jockey One", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap'); /*font-family: "Libre Baskerville", serif;*/
+
+/*Colores de la pagina web*/
+:root {
+    --color_verde1: #A5FD04;
+    --color_verde2: #8CD404;
+    --color_azul: #115BA0;
+    --blanco: white;
+    --black: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Clase para ocultar cosas*/
+.Desaparcer{
+  display: none;
+}
+body{
+    margin: 0 auto;
+}
+/*__________________________________________________________CABECERA____________________________________________________*/
+.Cabecera{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color_verde2);
+    width: 100%;
+    height: 7rem;
+}
+
+/*estilos de la img de la cabecera*/
+.Cabecera__img{
+    height: 7rem;
+    width: auto;
+}
+
+/*estilos de los enlaces de la cabecera*/
+.Cabecera__div__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.Cabecera__div__links a{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Jockey One", serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 2rem;
+    margin-right: 2rem;
+}
+
+/*estilos del buscador de la cabecera */
+.Cabecera__div__buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.Cabecera__div__buscador:hover {
+    box-shadow: 0 0 20px 10px var(--color_verde1);
+}
+
+/*estilos del buscador de la cabecera input*/
+.Cabecera__buscador{
+    outline: none;
+    background-color: var(--color_verde2);
+    border: 2.5px solid var(--black);
+    height: 2.0rem;
+    width: 12rem;
+    border-radius: 20px 0 0 20px;
+}
+.Cabecera__buscador::placeholder {
+    padding-left: 5px;
+    color: black;
+    font-family: "Libre Baskerville", serif;
+}
+
+/*estilos de el buscador de la cabecera boton*/
+.Cabecera__button{
+    cursor: pointer;
+    background-color: var(--color_principal);
+    border: 2.5px solid var(--black);
+    border-left: none;
+    width: 2.6rem;
+    height: 2.3rem;
+    border-radius: 0 20px 20px 0;
+}
+
+/*estilos de los iconos de la cabecera*/
+.Cabecera__a__icon {
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+.Cabecera__icon {
+    width: 60px;
+    height: 60px;
+}
+
+/*__________________________________________________________MENU______________________________________________________*/
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--black);
+    position: sticky; 
+    top: 0; 
+    z-index: 1;
+}
+/*estilo de los elementos a del menu*/
+.menu a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Libre Baskerville", serif;
+    position: relative;
+}
+.menu a:hover{
+    color: var(--color_verde1);
+}
+
+/* Efecto animation barra menu linea */
+.menu[data-animation="bonus"] a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color_verde1);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu[data-animation="bonus"] a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
+
+
+/*____________________________________________________________________Estilos del cuerpo________________________________________________________________*/
+
+/*Estilos de la imagen principal*/
+.index__ImgPrincipal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.index__ImgPrincipal img {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 85%;
+}
+
+.index__ImgPrincipal__TextoEncima {
+    font-family: "Jockey One", serif;
+    color: var(--color_verde1);
+    text-align: center;
+    font-size: 3.5rem;
+    max-width: 16rem;
+    font-weight: bold;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 0.1px black;
+}
+
+/*estilos de OneGoal*/
+
+.index__QueEsOneGoal{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1fr, 0.15fr, 0.25fr, 1fr);
+    gap: 2rem;
+    padding-left: 15%;
+    width: 70%;
+
+}
+
+.index__QueEsOneGoal h2{
+    font-family: "Jockey One", serif;
+    font-size: 3rem;
+}
+.resaltado{
+    color: var(--color_verde1);
+}
+
+.index__QueEsOneGoal__Titulo{
+    grid-row: 1/1;
+    grid-column: 1/3;
+
+}
+.index__QueEsOneGoal__Contenido__1{
+  grid-row: 2/5;
+  grid-column: 1/3;
+}
+.index__QueEsOneGoal__Contenido__2__div__1{
+    grid-row: 1/3;
+    grid-column: 3/3;
+}
+.index__QueEsOneGoal__Contenido__2__div__2{
+    grid-row: 1/3;
+    grid-column: 4/4;
+}
+.index__QueEsOneGoal__Contenido__2__div__3{
+    grid-row: 3/5;
+    grid-column: 3/3;
+}
+.index__QueEsOneGoal__Contenido__2__div__4{
+    grid-row: 3/5;
+    grid-column: 4/4;
+}
+
+.index__QueEsOneGoal__Contenido__1 p{
+    font-family: "Libre Baskerville", serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+}
+
+.index__QueEsOneGoal__Contenido__1 button{
+    margin-top: 2rem;
+    width: 8rem;
+    height: 2.4rem;
+    color: var(--color_verde1);
+    font-family: "Libre Baskerville", serif;
+    font-weight: bolder;
+    font-size: 1rem;
+    border: 2px solid var(--color_verde1);
+    border-radius: 16px;
+}
+
+.index__QueEsOneGoal__Contenido__1 button:hover{
+    cursor: pointer;
+}
+
+.index__QueEsOneGoal__Contenido__2 h3{
+    font-family: "Jockey One", serif;
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+.index__QueEsOneGoal__Contenido__2 p{
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.4rem;
+}
+
+
+/*estilos de las noticias*/
+.index__Noticias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.index__Noticias__Titulo{
+    color: var(--black);
+    font-size: 3rem;
+    font-family: "Jockey One", serif;
+    text-decoration: underline;
+}
+
+.index__Noticias__Contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.index__Noticia{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 400px;
+    border: 2px solid var(--black);
+    border-radius: 20px;
+}
+
+.index__Noticia__img{
+    width: 100%;
+    height: 50%;
+    border-bottom: 3px solid var(--black);
+}
+
+.index__Noticia__img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.index__Noticia__texto{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    padding: 10px;
+}
+
+.index__Noticia__texto h2{
+    color: var(--color_verde1);
+    font-family: "Jockey One", serif;
+    font-size: 1rem;
+}
+
+.index__Noticia__texto p{
+    margin-top: 1rem;
+    font-family: "Libre Baskerville", serif;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.index__Noticia__texto button{
+    margin-top: 2rem;
+    width: 50%;
+    height: 2.4rem;
+    color: var(--color_verde1);
+    font-family: "Libre Baskerville", serif;
+    font-weight: bolder;
+    font-size: 1rem;
+    border: 2px solid var(--color_verde1);
+    border-radius: 16px;
+}
+
+.index__Noticia__texto button:hover{
+    cursor: pointer;
+}
+
+/*estilos de la secion la liga*/
+.index__LaLiga{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+}
+
+.index__LaLiga p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: "Jockey One", serif;
+}
+
+.index__LaLiga img{
+    margin-left: 5px;
+    width: 10rem;
+    height: auto;
+}
+
+/*__________________________________________________________CONTACTANOS______________________________________________________*/
+.contactanos {
+    text-align: center;
+    background-color: var(--color_verde2);
+    color: var(--blanco);
+    padding: 30px;
+}
+
+.contactanos h2 {
+    font-size: 2.2rem;
+    font-family: "Jockey One", serif;
+    margin-bottom: 15px;
+}
+
+.contactanos p {
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* estilos de los iconos de contactanos */
+.contactanos div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contactanos__a__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactanos__icon {
+    width: 60px;
+    height: 60px;
+}
+
+/*__________________________________________________________FOOTER______________________________________________________*/
+footer {
+    background-color: var(--black);
+    color: var(--blanco);
+    font-family: 'Libre Baskerville', serif;
+    padding: 20px 0;
+}
+
+.footer__contenido {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* estilos del logo en el footer */
+.footer__contenido__img img {
+    width: 16rem;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: 1.5rem;
+    border-radius: 20px;
+    border: 2px solid var(--black);
+}
+
+/* estilos de la sección de enlaces */
+.footer__contenido__links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.footer__contenido__links__footer__section {
+    min-width: 100px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer__contenido__links__footer__section h3 {
+    font-family: "Jockey One", serif;
+    font-size: 1.6rem;
+    color: var(--color_verde2);
+    border-bottom: 2px solid var(--color-verde1);
+}
+
+.footer__contenido__links__footer__section a {
+    display: block;
+    margin: 8px 0;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--blanco);
+    transition: color 0.3s;
+}
+
+.footer__contenido__links__footer__section a:hover {
+    color: var(--color_verde1);
+}
+
+/* estilos de los redes sociales */
+.footer__contenido__social {
+    display: block;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer__a__icon {
+    display: flex;
+    margin-top: 10px;
+    margin-right: 5rem;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--black);
+    border: 2px solid var(--black);
+    transition: box-shadow 0.3s;
+}
+
+.footer__a__icon:hover {
+    box-shadow: 0 0 15px var(--color_verde2);
+}
+
+.footer__icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* estilos del final del footer */
+.footer__end {
+    padding-top: 10px;
+    padding-left: 2rem;
+}
+
+.footer__end a {
+    text-decoration: none;
+    color: var(--color_verde1);
+    font-size: 1rem;
+    transition: color 0.3s;
+    padding-right: 40px;
+}
+
+.footer__end a:hover {
+    text-decoration: underline;
+}
+
+/*-------------------------------------------------------Media Querrys------------------------------------------------------------*/
+@media (max-width: 1500px) {
+
+    .index__QueEsOneGoal h2{
+        font-size: 2.5rem;
+    }
+
+    .index__QueEsOneGoal__Contenido__1 p{
+        font-size: 1rem;
+    
+    }
+    .index__QueEsOneGoal__Contenido__2 h3{
+        font-size: 1.2rem;
+    }
+    
+    .index__QueEsOneGoal__Contenido__2 p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 1140px) {
+    .Cabecera__div__links a{
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        margin-right: 1rem;
+    }
+
+    .Cabecera__buscador{
+        width: 5rem;
+    }
+
+    .Cabecera__a__icon {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .Cabecera__icon {
+        width: auto;
+        height: auto;
+    }
+
+    .index__QueEsOneGoal__Contenido__1 p{
+        font-size: 1rem;
+    
+    }
+    .index__QueEsOneGoal__Contenido__2 h3{
+        font-size: 1rem;
+    }
+    
+    .index__QueEsOneGoal__Contenido__2 p{
+        font-size: 0.8rem;
+    }
+
+    .index__Noticias__Titulo {
+        font-size: 2.5rem;
+    }
+
+    .index__Noticias__Contenido {
+        gap: 15px;
+    }
+    .index__Noticia__texto h2 {
+        font-size: 1.2rem;
+    }
+
+    .index__Noticia__texto p {
+        font-size: 1rem;
+    }
+
+    .index__Noticia__texto button {
+        width: 60%;
+        height: 24%;
+    }
+}
+
+
+@media (max-width: 1070px) {
+    .Cabecera__img{
+        height: 6rem;
+        width: auto;
+    }
+    .menu a{
+        font-size: 1.3rem;
+    }
+
+    .index__ImgPrincipal__TextoEncima {
+        font-size: 2rem;
+        max-width: 9rem;
+    }
+
+    .footer__contenido__img img {
+        width: 10rem;
+    }
+
+    .index__QueEsOneGoal__Contenido__2 img{
+        width: 2.5rem;
+    }
+
+    .index__QueEsOneGoal__Contenido__1 p{
+        font-size: 0.8rem;
+    
+    }
+    .index__QueEsOneGoal__Contenido__2 h3{
+        font-size: 0.8rem;
+    }
+    
+    .index__QueEsOneGoal__Contenido__2 p{
+        font-size: 0.6rem;
+    }
+
+    .index__LaLiga{
+        height: 6rem;
+    }
+    
+    .index__LaLiga p{
+        font-size: 2.8rem;
+    }
+    
+    .index__LaLiga img{
+        width: 9rem;
+        height: auto;
+    }
+   
+    .footer__contenido__links__footer__section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .footer__contenido__links__footer__section a {
+        font-size: 0.8rem;
+    }
+
+    .footer__a__icon {
+        width: 30px;
+        height: 30px;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+
+    .footer__icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .index__Noticias__Contenido{
+        flex-direction: column;
+    }
+
+    .index__Noticia{
+        width: 80%;
+        height: 400px;
+    }
+
+    .index__Noticias__Titulo {
+        font-size: 2.5rem;
+    }
+
+    .index__Noticia__texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .index__Noticia__texto p {
+        font-size: 1rem;
+    }
+
+    .index__Noticia__texto button {
+        width: 50%;
+        height: 20%;
+    }
+
+}
+/* Responsive para celulares */
+@media screen and (max-width: 774px) {
+    .Cabecera__img{
+        height: 4.6rem;
+        width: auto;
+    }
+
+    .Cabecera__div__links a{
+        font-size: 1.2rem;
+        margin-right: 0.6rem;
+        margin-right: 0.6rem;
+    }
+
+    .menu a{
+        font-size: 1rem;
+    }
+
+    .index__QueEsOneGoal h2{
+        font-size: 1.8rem;
+    }
+
+    .index__QueEsOneGoal__Contenido__2 img{
+        width: 2rem;
+    }
+
+    .index__QueEsOneGoal__Contenido__1 p{
+        font-size: 0.6rem;
+    
+    }
+    .index__QueEsOneGoal__Contenido__2 h3{
+        font-size: 0.7rem;
+    }
+    
+    .index__QueEsOneGoal__Contenido__2 p{
+        font-size: 0.5rem;
+    }
+
+    .index__LaLiga{
+        height: 5rem;
+    }
+    
+    .index__LaLiga p{
+        font-size: 2.2rem;
+    }
+
+    .index__Noticia{
+        width: 60%;
+        height: 400px;
+    }
+
+    .contactanos h2 {
+        font-size: 2rem;
+    }
+
+    .contactanos p {
+        font-size: 1rem;
+    }
+
+    .contactanos__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer__contenido__links__footer__section h3 {
+        font-size: 1rem;
+    }
+    
+    .footer__contenido__links__footer__section a {
+        font-size: 0.6rem;
+    }
+
+    .footer__a__icon {
+        width: 20px;
+        height: 20px;
+        margin-top: 25px;
+        margin-left: 6px;
+    }
+
+    .footer__icon {
+        width: 10px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 662px) {
+
+    .Cabecera__div__links a{
+        display: none;
+    }
+
+    .menu a{
+        font-size: 0.7rem;
+    }
+
+    .index__ImgPrincipal__TextoEncima {
+        font-size: 1rem;
+        max-width: 4.5rem;
+    }
+
+    .index__LaLiga{
+        height: 6rem;
+    }
+    
+    .index__LaLiga p{
+        font-size: 2rem;
+    }
+    
+    .index__LaLiga img{
+        width: 8rem;
+        height: auto;
+    }
+
+    .footer__contenido__img img {
+        width: 8rem;
+    }
+
+    .footer__end a {
+        font-size: 0.8rem;
+    }
+}
