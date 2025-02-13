@@ -542,3 +542,64 @@ footer {
         font-size: 0.8rem;
     }
 }
+
+@media screen and (max-width: 442px) {
+    .Cabecera__img{
+        height: 3.8rem;
+        width: auto;
+    }
+
+    .Cabecera__div__links{
+        display: none;
+    }
+    
+    .menu{
+        height: 3rem;
+    }
+
+    .menu a{
+        font-size: 0.6rem;
+    }
+
+    .cuerpo h1{
+        font-size: 2.2rem;
+    }
+    
+    .cuerpo hr{
+      width: 80%;
+    }
+
+    .principal table {
+        width: 98%;
+    }
+
+    .principal__th__titulo {
+        font-size: 1.4rem;
+    }
+
+    .principal__th__normal {
+        font-size: 1rem;
+    }
+
+    .principal td {
+        font-size: 1rem;
+        padding: 2px;
+    }
+
+    .principal td p{
+        margin-left: 2px;
+    }
+
+    .principal__td__marcador{
+        width: 50px;
+        margin-top: 6px;
+    }
+
+    .footer__contenido__img img {
+        width: 7rem;
+    }
+
+    .footer__end a {
+        font-size: 0.7rem;
+    }
+}

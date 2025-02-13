@@ -573,3 +573,30 @@ footer {
         font-size: 0.8rem;
     }
 }
+
+@media screen and (max-width: 442px) {
+    .Cabecera__img{
+        height: 3.8rem;
+        width: auto;
+    }
+
+    .Cabecera__div__links{
+        display: none;
+    }
+    
+    .menu{
+        height: 3rem;
+    }
+
+    .menu a{
+        font-size: 0.6rem;
+    }
+
+    .footer__contenido__img img {
+        width: 7rem;
+    }
+
+    .footer__end a {
+        font-size: 0.7rem;
+    }
+}
