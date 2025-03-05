@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercado de apuestas</title>
     <link rel="stylesheet" href="css/styleApuestsa.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -151,17 +152,15 @@
     </div>
 </div>
 
-<div class="contactanos">
-    <h2>Contactanos</h2>
-    <p>Para más información sobre cómo crear tus propias apuestas con tus amigos o algun problema con la pagina contáctanos por Facebook o correo electrónico.</p>
-    <div>
-        <a href="#" class="contactanos__a__icon">
-            <img src="img/ICONOS/Facebook-blanco-verde2.svg" alt="Facebook" class="contactanos__icon">
-        </a>
-        <a href="#" class="contactanos__a__icon">
-            <img src="img/ICONOS/Mail.png" alt="Mail" class="contactanos__icon">
-        </a>
+<div id="assistant" class="fixed bottom-10 right-5 flex flex-col items-end space-y-2">
+    <div id="Popup" class="hidden bg-white p-4 rounded-lg shadow-lg w-64 border border-gray-300">
+        <p class="text-black font-['Libre_Baskerville'] text-lg font-bold">Hola,Soy tu asistente IA</p>
+        <input type="text" placeholder="Escribe tu pregunta..." class="border border-[#8CD404] p-2 w-full mt-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8CD404]">
+        <textarea placeholder="Como puedo ayudarte hoy?. Puedo analizar tendencias y responder preguntas sobre horarios, reglas y estado de las competiciones." class="border border-gray-300 p-3 w-full mt-2 rounded-md h-24 resize-none focus:outline-none focus:ring-2 focus:ring-[#8CD404]"></textarea>
     </div>
+    <button id="Icon" class="w-16 h-16 bg-black rounded-full shadow-lg flex justify-center items-center transition-all duration-300">
+        <img src="img/balon-futurista.jpeg" alt="Balon-futurista" class="w-full h-full object-cover rounded-full">
+    </button>
 </div>
 
 <footer>
@@ -214,4 +213,11 @@
         <a href="#">Preguntas frecuentes</a>
     </div>
 </footer>
+
+<script>
+    document.getElementById("Icon").addEventListener("click", function() {
+        document.getElementById("Popup").classList.toggle("hidden");
+    });
+</script>
 </body>
+</html>

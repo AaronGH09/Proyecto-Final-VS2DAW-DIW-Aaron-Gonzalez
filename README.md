@@ -21,3 +21,10 @@ Este proyecto está bajo la Licencia Creative Commons BY o CC BY. Puedes compart
 -Estructura básica con HTML y CSS.
 -Implementación de iconos utilizando Iconos8.
 -Prototipo inicial creado en Figma.
+**v1** 
+-Transición suave en botones con una transición de 0.3s.
+-fade-in suave en la página inicial. 
+-Efecto hover de elevarse ligeramente en las tarjetas de apuestas. 
+-Rotación sutil en iconos interactivos en Contactanos y Footer. 
+-Efecto "parpadeo" en las notificaciones. 
+-Implementación de interfaz de IA en Apuestas.

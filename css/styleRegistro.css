@@ -93,7 +93,7 @@ body{
     border: 2.5px solid var(--black);
     border-left: none;
     width: 2.6rem;
-    height: 2.3rem;
+    height: 2.2rem;
     border-radius: 0 20px 20px 0;
 }
 
@@ -333,6 +333,19 @@ h2 {
     text-decoration: none;
     color: var(--blanco);
     font-family: "Libre Baskerville", serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.cuerpo__Flex__btn{
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cuerpo__Flex__btn:hover {
+    background-color: var(--black);
+}
+
+.cuerpo__Flex__btn:hover a {
+    color: var(--color_verde2);
 }
 /*__________________________________________________________FOOTER______________________________________________________*/
 footer {
@@ -423,6 +436,11 @@ footer {
 .footer__icon {
     width: 30px;
     height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer_icon:hover {
+    transform: rotate(10deg);
 }
 
 /* estilos del final del footer */

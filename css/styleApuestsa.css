@@ -20,6 +20,7 @@
 .Desaparcer{
   display: none;
 }
+
 body{
     margin: 0 auto;
 }
@@ -93,7 +94,7 @@ body{
     border: 2.5px solid var(--black);
     border-left: none;
     width: 2.6rem;
-    height: 2.3rem;
+    height: 2.2rem;
     border-radius: 0 20px 20px 0;
 }
 
@@ -195,6 +196,7 @@ body{
 .principal tr:hover{
     background-color: var(--black);
     color: var(--color_verde2);
+    height: 2.8rem;
 }
 
 .principal td,th{
@@ -232,6 +234,7 @@ body{
     text-align: left !important;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .principal__td__marcador{
@@ -289,6 +292,11 @@ body{
 .contactanos__icon {
     width: 60px;
     height: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contactanos__icon:hover {
+    transform: rotate(10deg);
 }
 
 /*__________________________________________________________FOOTER______________________________________________________*/
@@ -380,6 +388,11 @@ footer {
 .footer__icon {
     width: 30px;
     height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer_icon:hover {
+    transform: rotate(10deg);
 }
 
 /* estilos del final del footer */

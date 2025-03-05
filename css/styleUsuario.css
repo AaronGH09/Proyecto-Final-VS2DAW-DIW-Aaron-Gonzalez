@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap'); /*font-family: "Jockey One", serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap'); /*font-family: "Libre Baskerville", serif;*/
 
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
 /*Colores de la pagina web*/
 :root {
     --color_verde1: #A5FD04;
@@ -93,7 +99,7 @@ body{
     border: 2.5px solid var(--black);
     border-left: none;
     width: 2.6rem;
-    height: 2.3rem;
+    height: 2.2rem;
     border-radius: 0 20px 20px 0;
 }
 
@@ -192,6 +198,10 @@ body{
     border-radius: 15px;
 }
 
+.cuerpo__opcionesUsuario button {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
 .cuerpo__opcionesUsuario__linea{
   border: 0;
   height: 2px;
@@ -273,6 +283,11 @@ body{
     height: 2.5rem;
 } 
 
+.cuerpo__opcionesUsuario button:hover{
+    background-color: var(--color_verde2);
+    color: var(--black);
+} 
+
 .cuerpo__opcionesUsuario__opciones{
     display: flex;
     justify-content: center;
@@ -337,6 +352,7 @@ body{
 
 .cuerpo__notificaciones button:hover{
     background-color: var(--color_verde2);
+    animation: blink 1s infinite;
 }
 
 .cuerpo__historialApuestas{
@@ -412,6 +428,7 @@ body{
     border: none;
     border-radius: 15px;
     width: 92%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .cuerpo__historialApuestas__apuesta button:hover{
@@ -508,6 +525,11 @@ footer {
 .footer__icon {
     width: 30px;
     height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer_icon:hover {
+    transform: rotate(10deg);
 }
 
 /* estilos del final del footer */
