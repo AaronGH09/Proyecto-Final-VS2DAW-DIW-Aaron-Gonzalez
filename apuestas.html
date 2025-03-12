@@ -10,28 +10,28 @@
 <body>
 
 <header class="Cabecera">
-    <img src="img/logo.PNG" alt="logo__onegool__header" class="Cabecera__img">
+    <img src="img/logo.PNG" alt="Logo de la empresa OneGool" class="footer__img">
 
     <div class="Cabecera__div__links">
         <a href="#">Ayuda</a>
-        <a href="#">Contaco</a>
+        <a href="#">Contacto</a>
         <a href="#">Modalidades</a>
     </div>
     
     <div class="Cabecera__div__buscador">
-        <input type="text" class="Cabecera__buscador" placeholder="Buscar" />
+        <input type="text" class="Cabecera__buscador" placeholder="Buscar" aria-label="Buscar en el sitio" />
         <button type="submit" class="Cabecera__button">
             <img src="img/ICONOS/Lupa.png" alt="busqueda-de-lupa">
         </button>
     </div>
 
     <div class="Cabecera__div__icon">
-        <a href="registro.html" class="Cabecera__a__icon">
+        <button  onclick="window.location.href='registro.html';" class="Cabecera__a__icon" aria-label="Ir al registro de usuario">
             <img src="img/ICONOS/User-negre-verde2.png" alt="icono-usuario-header" class="Cabecera__icon">
-        </a>
-        <a href="#" class="Cabecera__a__icon">
+        </button>
+        <button  href="#" class="Cabecera__a__icon" aria-label="Abrir menú">
             <img src="img/ICONOS/Menú.svg" alt="icono-menu-header" class="Cabecera__icon">
-        </a>
+        </button>
     </div>
 </header>
 
@@ -42,14 +42,14 @@
     <a href="apuestas.html">Mercado de Apuestas</a>
 </nav>
 
-<div class="cuerpo">
+<section class="cuerpo">
     <h1>Partidos de hoy en directo</h1>
     <hr>
-    <div class="principal">
+    <article class="principal">
         <h2>La Liga</h2>
         <table>
             <tr>
-                <th class="principal__th__titulo">Football en dierecto!!!</th>
+                <th class="principal__th__titulo">Fútbol en directo!!!</th>
                 <th class="principal__th__normal">Local</th>
                 <th class="principal__th__normal">Empate</th>
                 <th class="principal__th__normal">Visitante</th>
@@ -79,12 +79,12 @@
                 <td>0.455</td>
             </tr>
         </table>
-    </div>
-    <div class="principal">
+    </article>
+    <article class="principal">
         <h2>Copa del Rey</h2>
         <table>
             <tr>
-                <th class="principal__th__titulo">Football en Dierecto!!!</th>
+                <th class="principal__th__titulo">Fútbol en directo!!!</th>
                 <th class="principal__th__normal">Local</th>
                 <th class="principal__th__normal">Empate</th>
                 <th class="principal__th__normal">Visitante</th>
@@ -114,12 +114,12 @@
                 <td>0.455</td>
             </tr>
         </table>
-    </div>
-    <div class="principal">
+    </article>
+    <article class="principal">
         <h2>Champions League</h2>
         <table>
             <tr>
-                <th class="principal__th__titulo">Football en Dierecto!!!</th>
+                <th class="principal__th__titulo">Fútbol en directo!!!</th>
                 <th class="principal__th__normal">Local</th>
                 <th class="principal__th__normal">Empate</th>
                 <th class="principal__th__normal">Visitante</th>
@@ -149,18 +149,22 @@
                 <td>0.455</td>
             </tr>
         </table>
-    </div>
-</div>
+    </article>
+</section>
 
 <div id="assistant" class="fixed bottom-10 right-5 flex flex-col items-end space-y-2">
     <div id="Popup" class="hidden bg-white p-4 rounded-lg shadow-lg w-64 border border-gray-300">
-        <p class="text-black font-['Libre_Baskerville'] text-lg font-bold">Hola,Soy tu asistente IA</p>
+        <p class="text-gray-900 font-['Libre_Baskerville'] text-lg font-bold">Hola,Soy tu asistente IA</p>
         <input type="text" placeholder="Escribe tu pregunta..." class="border border-[#8CD404] p-2 w-full mt-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#8CD404]">
         <textarea placeholder="Como puedo ayudarte hoy?. Puedo analizar tendencias y responder preguntas sobre horarios, reglas y estado de las competiciones." class="border border-gray-300 p-3 w-full mt-2 rounded-md h-24 resize-none focus:outline-none focus:ring-2 focus:ring-[#8CD404]"></textarea>
     </div>
-    <button id="Icon" class="w-16 h-16 bg-black rounded-full shadow-lg flex justify-center items-center transition-all duration-300">
-        <img src="img/balon-futurista.jpeg" alt="Balon-futurista" class="w-full h-full object-cover rounded-full">
-    </button>
+    <button id="Icon" 
+        aria-label="Abrir asistente IA" 
+        aria-expanded="false" 
+        aria-controls="Popup"
+        class="w-16 h-16 bg-gray-800 rounded-full shadow-lg flex justify-center items-center transition-all duration-300">
+        <img src="img/balon-futurista.jpeg" alt="Balon Futurista" class="w-full h-full object-cover rounded-full">
+</button>
 </div>
 
 <footer>
@@ -216,7 +220,9 @@
 
 <script>
     document.getElementById("Icon").addEventListener("click", function() {
-        document.getElementById("Popup").classList.toggle("hidden");
+        let popup = document.getElementById("Popup");
+        let isOpen = !popup.classList.toggle("hidden");
+        this.setAttribute("aria-expanded", isOpen);
     });
 </script>
 </body>

@@ -46,7 +46,7 @@
             <h2>Inicio de sesión</h2>
             <input type="text" placeholder="Teléfono, usuario o correo electrónico">
             <input type="password" placeholder="Contraseña">
-            <button class="cuerpo__Flex__btn"><a class="cuerpo__Flex__a" href="usuario.html">Entrar</a></button>
+            <button class="cuerpo__Flex__btn" onclick="location.href='usuario.html'">Entrar</button>
             <div class="cuerpo__Flex__login__facebook">
                 <img src="img/ICONOS/Facebook-azul-blanco.svg" alt="Facebook logo">
                 <a href="#">Iniciar sesión con Facebook</a>
@@ -65,8 +65,8 @@
             <input type="text" placeholder="Nombre de Usuario">
             <input type="text" placeholder="Cuenta Bancaria">
             <div class="cuerpo__Flex__register__checkbox">
-                <input type="checkbox">
-                <p>Condiciones y Políticas</p>    
+                <input type="checkbox" id="terms">
+                <label for="terms">Condiciones y Políticas</label>
             </div>
             <button class="cuerpo__Flex__btn"><a class="cuerpo__Flex__a" href="usuario.html">Registrarse</a></button>
         </div>

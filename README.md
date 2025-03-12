@@ -16,11 +16,13 @@ Este proyecto está bajo la Licencia Creative Commons BY o CC BY. Puedes compart
 [Prototipo Figma](https://www.figma.com/design/0ZppoIQuanjc7QkKb8q75P/Design-System-Proyecto-Final-v0?node-id=0-1&t=nd0TTbu3UfEHWCtI-1 )
 
 ## Mejoras y cambios en cada versión:
+
 **v0**
 -Primer lanzamiento del proyecto.
 -Estructura básica con HTML y CSS.
 -Implementación de iconos utilizando Iconos8.
 -Prototipo inicial creado en Figma.
+
 **v1** 
 -Transición suave en botones con una transición de 0.3s.
 -fade-in suave en la página inicial. 
@@ -28,3 +30,7 @@ Este proyecto está bajo la Licencia Creative Commons BY o CC BY. Puedes compart
 -Rotación sutil en iconos interactivos en Contactanos y Footer. 
 -Efecto "parpadeo" en las notificaciones. 
 -Implementación de interfaz de IA en Apuestas.
+
+**v2** 
+-Implementar mejoras de accesibilidad.
+-Corrección del error del header de Apuestas de la version 1.
