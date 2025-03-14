@@ -6,6 +6,7 @@
 :root {
     --color_verde1: #A5FD04;
     --color_verde2: #8CD404;
+    --color_verde3: #3E5D04;
     --color_azul: #115BA0;
     --blanco: white;
     --black: black;
@@ -271,7 +272,7 @@ h2 {
 .cuerpo__Flex__login button{
     cursor: pointer;
     width: 85%;
-    background-color: var(--color_verde2);
+    background-color: var(--color_verde3);
     color: var(--blanco);
     margin-bottom: 10px;
     padding: 10px;
@@ -297,7 +298,7 @@ h2 {
 .cuerpo__Flex__register button{
     cursor: pointer;
     width: 50%;
-    background-color: var(--color_verde2);
+    background-color: var(--color_verde3);
     color: var(--blanco);
     margin-bottom: 10px;
     padding: 10px;
@@ -313,7 +314,7 @@ h2 {
 }
 
 .cuerpo__Flex__register__checkbox{
-    color: var(--color_verde2);
+    color: var(--color_verde3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -323,11 +324,11 @@ h2 {
 
 .cuerpo__Flex__register__checkbox input[type="checkbox"] {
     appearance: none;
-    border: 1px solid var(--color_verde2);  
+    border: 1px solid var(--color_verde3);  
 }
 
 .cuerpo__Flex__register__checkbox input[type="checkbox"]:checked {
-    background-color: var(--color_verde2);
+    background-color: var(--color_verde3);
     border: none;
 }
 
@@ -351,7 +352,7 @@ h2 {
 }
 
 .cuerpo__Flex__btn:hover a {
-    color: var(--color_verde2);
+    color: var(--color_verde3);
 }
 /*__________________________________________________________FOOTER______________________________________________________*/
 footer {

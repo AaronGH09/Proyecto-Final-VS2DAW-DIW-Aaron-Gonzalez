@@ -17,6 +17,7 @@
 :root {
     --color_verde1: #A5FD04;
     --color_verde2: #8CD404;
+    --color_verde3: #3E5D04;
     --color_azul: #115BA0;
     --blanco: white;
     --black: black;
@@ -221,7 +222,7 @@ body{
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .resaltado{
-    color: var(--color_verde1);
+    color: var(--color_verde3);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     -webkit-text-stroke: 0.8px black;
 }
@@ -261,11 +262,11 @@ body{
     margin-top: 2rem;
     width: 8rem;
     height: 2.4rem;
-    color: var(--color_verde2);
+    color: var(--color_verde3);
     font-family: "Libre Baskerville", serif;
     font-weight: bolder;
     font-size: 1rem;
-    border: 2px solid var(--color_verde2);
+    border: 2px solid var(--color_verde3);
     border-radius: 16px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     -webkit-text-stroke: 0.4px black;
@@ -274,7 +275,7 @@ body{
 
 .index__QueEsOneGoal__Contenido__1 button:hover{
     cursor: pointer;
-    background-color: var(--color_verde2);
+    background-color: var(--color_verde3);
     color: var(--black);
     border: 2px solid var(--black);
 }
@@ -347,7 +348,7 @@ body{
 }
 
 .index__Noticia__texto h2{
-    color: var(--color_verde1);
+    color: var(--color_verde3);
     font-family: "Jockey One", serif;
     font-size: 1rem;
     font-weight: bold;
@@ -365,11 +366,11 @@ body{
     margin-top: 2rem;
     width: 50%;
     height: 2.4rem;
-    color: var(--color_verde2);
+    color: var(--color_verde3);
     font-family: "Libre Baskerville", serif;
     font-weight: bolder;
     font-size: 1rem;
-    border: 2px solid var(--color_verde2);
+    border: 2px solid var(--color_verde3);
     border-radius: 16px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
@@ -377,7 +378,7 @@ body{
 
 .index__Noticia__texto button:hover{
     cursor: pointer;
-    background-color: var(--color_verde2);
+    background-color: var(--color_verde3);
     color: var(--black);
     border: 2px solid var(--black);
 }
@@ -407,7 +408,7 @@ body{
 /*__________________________________________________________CONTACTANOS______________________________________________________*/
 .contactanos {
     text-align: center;
-    background-color: var(--color_verde2);
+    background-color: var(--color_verde3);
     color: var(--blanco);
     padding: 30px;
 }
