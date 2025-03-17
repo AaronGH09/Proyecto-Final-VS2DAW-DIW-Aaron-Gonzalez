@@ -6,6 +6,7 @@
 :root {
     --color_verde1: #A5FD04;
     --color_verde2: #8CD404;
+    --color_verde3: #3E5D04;
     --color_azul: #115BA0;
     --blanco: white;
     --black: black;
@@ -163,7 +164,7 @@ body{
 
 .ranking h2{
     margin-top: 20px;
-    color: var(--color_verde2);
+    color: var(--color_verde3);
     font-size: 2.5rem;
     font-weight: bold;
     font-family: "Jockey One", serif;
@@ -225,7 +226,7 @@ body{
 .desafios__titulo__principal {
     margin-left: 2%;
     margin-top: 20px;
-    color: var(--color_verde2);
+    color: var(--color_verde3);
     font-size: 2.5rem;
     font-weight: bold;
     font-family: "Jockey One", serif;
@@ -311,7 +312,7 @@ body{
 /*__________________________________________________________CONTACTANOS______________________________________________________*/
 .contactanos {
     text-align: center;
-    background-color: var(--color_verde2);
+    background-color: var(--color_verde3);
     color: var(--blanco);
     padding: 30px;
 }
